@@ -1,0 +1,14 @@
+.container {
+  box-sizing: border-box;
+  border: 1px solid red;
+  height: 92.5vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
+}
+.highscores {
+  margin-top: 50px;
+  max-width: 800px;
+  width: 80vw;
+}

@@ -1,0 +1,15 @@
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+.img-wrapper {
+  position: relative;
+}
+.img-container img {
+  max-width: 100%;
+  display: block;
+  position: relative;
+}
+.teapot {
+  background-color: blue;
+}
