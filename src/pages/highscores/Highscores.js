@@ -1,6 +1,6 @@
 import styles from './Highscores.module.css';
 import HighscoreRow from './HighscoreRow';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, orderBy, query } from 'firebase/firestore';
 import db from '../../firebase/config';
 import { useState, useEffect } from 'react';
 import sortHighscores from '../../logic/sortHighscores';
@@ -12,8 +12,10 @@ export default function Highscores() {
 
   const getScores = async () => {
     const arr = [];
-    const querySnapshot = await getDocs(collection(db, 'highscores'));
+    const q = query(collection(db, 'highscores'), orderBy('timeTaken', 'asc'));
+    const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
+      console.log(doc);
       arr.push(doc);
     });
     setHighscores(arr);
@@ -25,7 +27,9 @@ export default function Highscores() {
 
   if (highscores) {
     const sortedHighscores = sortHighscores(highscores);
-    rows = sortedHighscores.map((doc) => {
+    console.log(sortedHighscores);
+    rows = highscores.map((doc) => {
+      console.log(doc.data());
       return (
         <HighscoreRow
           key={doc.id}

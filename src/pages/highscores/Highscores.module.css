@@ -1,6 +1,5 @@
 .container {
   box-sizing: border-box;
-  border: 1px solid red;
   height: 92.5vh;
   display: flex;
   align-items: center;

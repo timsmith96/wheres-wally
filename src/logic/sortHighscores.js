@@ -1,4 +1,5 @@
 export default function sortHighscores(highscores) {
+  console.log('sorting highscores');
   return highscores.sort((a, b) => {
     return (
       new Date('1970/01/01 ' + a.data().timeTaken) -
@@ -6,3 +7,5 @@ export default function sortHighscores(highscores) {
     );
   });
 }
+
+// '1970/01/01 ' +
