@@ -16,5 +16,5 @@ A photo tagging game based on the Where's Wally book series. Built using
 
 ## Demo
 
-[https://charming-custard-50007f.netlify.app/]
+https://charming-custard-50007f.netlify.app/
 
